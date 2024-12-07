@@ -1,0 +1,329 @@
+<!-- mi_template.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página</title>
+    <style>
+        /* Estilo base para todos los dispositivos */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Toolbar */
+
+
+        /* Footer */
+
+
+        /* Contenido principal */
+        .content {
+            flex-grow: 1;
+            padding-left: 15px;
+            
+        }
+
+        /* Diseño para dispositivos móviles y tablet */
+        .móvil, .tablet {
+            .toolbar {
+                background-color: rgb(7, 14, 77);
+                padding: 15px;
+                text-align: center;
+                font-size: 24px;
+                font-weight: bold;
+                width: 100%;   
+            }
+            
+            ion-content{
+                .logo{
+                    width: 300px;  /* Establece el ancho de la imagen */
+                    height: auto;
+                }
+                a{
+                    display: flex;
+                    color: white;
+                    font-family: Arial, Helvetica, sans-serif;
+                    margin-bottom: 3rem;
+                    text-align: center;
+                }
+                p{
+                    text-align: left;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                }
+                .caracteristicas{
+                    text-align: left;
+                    margin-left: 2rem;
+                }
+
+                #mensajeUnete{
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                }
+
+                ion-item{
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 1.5rem;
+                }
+
+                li{
+                    margin-top: 1rem;
+                }
+                text-align: center;
+            }
+
+            #mensajeUnete{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 30px;
+            }
+            .footer {
+                background-color: rgb(7, 14, 77);
+                padding: 10px;
+                text-align: center;
+                margin-bottom: -4rem;
+                bottom: 0;
+                width: 100%;
+            }
+            background-color: rgb(2, 7, 55); /* Fondo para móvil y tablet */
+        }
+
+        /* Diseño para escritorio */
+        .escritorio {
+            .qr{
+                margin-top: 2rem;
+                width: 200px;  /* Establece el ancho */
+                height: 200px; /* Establece la altura */
+                object-fit: contain;
+            }
+            
+            .toolbar {
+                background-color: rgb(7, 14, 77);
+                padding: 15px;
+                text-align: center;
+                font-size: 24px;
+                font-weight: bold;
+                width: 100%;
+                
+            }
+            .footer {
+                background-color: rgb(7, 14, 77);
+                padding: 10px;
+                text-align: center;
+                margin-top: 2rem;
+                margin-bottom: -4rem;
+                bottom: 0;
+                width: 100%;
+            }
+            ion-content{
+                .logo{
+                    width: 300px;  /* Establece el ancho de la imagen */
+                    height: auto;
+                }
+                a{
+                    display: flex;
+                    color: white;
+                    font-family: Arial, Helvetica, sans-serif;
+                    margin-bottom: 3rem;
+                    text-align: center;
+                }
+                p{
+                    text-align: left;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                }
+                .caracteristicas{
+                    text-align: left;
+                    margin-left: 2rem;
+                }
+
+                #mensajeUnete{
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                }
+
+                ion-item{
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 1.5rem;
+                }
+
+                li{
+                    margin-top: 1rem;
+                }
+                text-align: center;
+            }
+
+            #mensajeUnete{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 30px;
+            }
+            .footer {
+                background-color: rgb(7, 14, 77);
+                padding: 10px;
+                text-align: center;
+                margin-bottom: -4rem;
+                bottom: 0;
+                width: 100%;
+            }
+            background-color: rgb(2, 7, 55); /* Fondo para móvil y tablet */
+        
+            background-color: rgb(2, 7, 55); /* Fondo para escritorio */
+        }
+
+        /* Estilo adicional para pantallas grandes */
+        @media (min-width: 768px) {
+            .content {
+                padding: 40px;
+            }
+        }
+
+    </style>
+</head>
+<body class="{{ dispositivo }}">
+
+    {% if dispositivo == 'móvil' %}
+    <body class="{{ dispositivo }}">
+        <!-- Toolbar -->
+        
+            <ion-toolbar class="toolbar">
+                SHARTTER
+            </ion-toolbar>
+       
+        
+        <!-- Contenido principal -->
+        <ion-content class="content">
+            <h1>¡Bienvenido!</h1>
+            <p>¡Bienvenido a nuestra aplicación móvil! Es una plataforma completamente gratis diseñada para que puedas compartir tus pensamientos, fotos con facilidad y diversión. Con una interfaz intuitiva y herramientas fáciles de usar, esta app te permite postear contenido en cualquier momento y lugar.</p>
+
+
+            <b class="caracteristicas">
+                <div>
+                    <li>Características:
+                        Publica contenido fácilmente: Comparte fotos, con solo unos clics.
+                    </li>
+                </div>
+                <div>
+                    <li>Totalmente gratis: Disfruta de todas las funciones sin necesidad de pagar.</li>
+                </div>
+                <div>
+                    <li>Entretenimiento sin fin: Navega por publicaciones, interactúa y diviértete.</li>
+                </div>
+                <div>
+                    <li>Conéctate con personas: Únete a una comunidad activa de usuarios que comparten tus intereses.</li>
+                </div>
+            </b>
+                <p class="mensajeUnete">¡Únete a nosotros y empieza a postear lo que más te gusta de forma fácil y entretenida!</p>
+                <ion-item>
+                    {% load static %}
+                    <img class="logo" src="{% static 'imagen/logo.png' %}" alt="Logo">
+                </ion-item>
+                <ion-item>
+                    <a class="apk" href="{{ MEDIA_URL }}apks/app-release.apk" download="app-release.apk">Descargar SHARTTER</a>
+                </ion-item>
+            </ion-content>
+    
+        <!-- Footer -->
+        <ion-footer class="footer">
+            <p>Todos los derechos reservados. © 2024</p>
+        <ion-footer>
+    
+    </body>
+
+
+    {% elif dispositivo == 'tablet' %}
+    <body class="{{ dispositivo }}">
+
+        <!-- Toolbar -->
+        <div class="toolbar">
+            SHARTTER
+        </div>
+    
+        <!-- Contenido principal -->
+        <ion-content class="content">
+            <h1>¡Bienvenido!</h1>
+            <p>¡Bienvenido a nuestra aplicación móvil! Es una plataforma completamente gratis diseñada para que puedas compartir tus pensamientos, fotos con facilidad y diversión. Con una interfaz intuitiva y herramientas fáciles de usar, esta app te permite postear contenido en cualquier momento y lugar.</p>
+
+
+            <b class="caracteristicas">
+                <div>
+                    <li>Características:
+                        Publica contenido fácilmente: Comparte fotos, con solo unos clics.
+                    </li>
+                </div>
+                <div>
+                    <li>Totalmente gratis: Disfruta de todas las funciones sin necesidad de pagar.</li>
+                </div>
+                <div>
+                    <li>Entretenimiento sin fin: Navega por publicaciones, interactúa y diviértete.</li>
+                </div>
+                <div>
+                    <li>Conéctate con personas: Únete a una comunidad activa de usuarios que comparten tus intereses.</li>
+                </div>
+            </b>
+                <p class="mensajeUnete">¡Únete a nosotros y empieza a postear lo que más te gusta de forma fácil y entretenida!</p>
+                <ion-item>
+                    {% load static %}
+                    <img class="logo" src="{% static 'imagen/logo.png' %}" alt="Logo">
+                </ion-item>
+                <ion-item>
+                    <a class="apk" href="{{ MEDIA_URL }}apks/app-release.apk" download="app-release.apk">Descargar SHARTTER</a>
+                </ion-item>
+            </ion-content>
+    
+    </body>
+
+
+    {% elif dispositivo == 'escritorio' %}
+    <body class="{{ dispositivo }}">
+        <!-- Toolbar -->
+        <div class="toolbar">
+            SHARTTER
+        </div>
+    
+        <!-- Contenido principal -->
+        <ion-content class="content">
+            <h1>¡Bienvenido!</h1>
+            <p>¡Bienvenido a nuestra aplicación móvil! Es una plataforma completamente gratis diseñada para que puedas compartir tus pensamientos, fotos con facilidad y diversión. Con una interfaz intuitiva y herramientas fáciles de usar, esta app te permite postear contenido en cualquier momento y lugar.</p>
+
+
+            <b class="caracteristicas">
+                <div>
+                    <li>Características:
+                        Publica contenido fácilmente: Comparte fotos, con solo unos clics.
+                    </li>
+                </div>
+                <div>
+                    <li>Totalmente gratis: Disfruta de todas las funciones sin necesidad de pagar.</li>
+                </div>
+                <div>
+                    <li>Entretenimiento sin fin: Navega por publicaciones, interactúa y diviértete.</li>
+                </div>
+                <div>
+                    <li>Conéctate con personas: Únete a una comunidad activa de usuarios que comparten tus intereses.</li>
+                </div>
+            </b>
+                <p class="mensajeUnete">¡Únete a nosotros y empieza a postear lo que más te gusta de forma fácil y entretenida!</p>
+                <div>
+                    {% load static %}
+                    <img class="logo" src="{% static 'imagen/logo.png' %}" alt="Logo">
+                </div>
+                <div>
+                    <img class="qr" src="{% url 'generar_qr_apk' %}" alt="Descargar APK">
+                </div>
+            </ion-content>
+    
+        <!-- Footer -->
+        <div class="footer">
+            <p>Todos los derechos reservados. © 2024</p>
+        </div>
+    
+    </body>
+    {% else %}
+        <p>No se pudo identificar tu dispositivo.</p>
+    {% endif %}
+</body>
+</html>
